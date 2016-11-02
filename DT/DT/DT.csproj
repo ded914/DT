@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DTConstractorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,9 +188,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\DTLogo.jpg" />
     <Content Include="Scripts\angular-ui-tree\angular-ui-tree.js" />
     <Content Include="Content\angular-ui-tree\angular-ui-tree.min.css" />
-    <Content Include="Scripts\DTConstractor\dtConstractorScript.js" />
+    <Content Include="Scripts\DTApp\dtAppScript.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angularfire.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -240,6 +242,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\DTConstractor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

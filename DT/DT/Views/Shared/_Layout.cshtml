@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/Content/angular-ui-tree/style-tree.css" />
 
 </head>
-<body>
+<body ng-app="DTApp">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,11 +21,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Dynamic Text", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Images/DTLogo.jpg" alt="Dynamic Text" style="width:auto; height:auto;" />
+                </a>
+                @*Html.ActionLink("Dynamic Text", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Dynamic Text
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("DDS Constructor", "Index", "DTConstractor")</li>
+                                <li><a href="#">Editor</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -44,5 +59,11 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/angular.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/angular-ui-tree/angular-ui-tree.js"></script>
+    <script type="text/javascript" src="~/Scripts/DTApp/dtAppScript.js"></script>
+
 </body>
 </html>

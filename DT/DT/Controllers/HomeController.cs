@@ -11,7 +11,7 @@ namespace DT.Controllers {
         }
 
         public ActionResult About() {
-            ViewBag.Message = "Dyanamic Text. © Igor Didenko 1987-2016";
+            ViewBag.Message = "Dynamic Text. © Igor Didenko, Andrej Didenko 1987-2016";
 
             return View();
         }
